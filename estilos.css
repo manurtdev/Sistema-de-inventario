@@ -1,0 +1,570 @@
+/* ============================================
+   ESTILOS PERSONALIZADOS - estilos.css
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #0d6efd;
+  --secondary-color: #6c757d;
+  --success-color: #198754;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #0dcaf0;
+  --light-bg: #f8f9fa;
+}
+
+body {
+  background-color: var(--light-bg);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ============== LOGIN ============== */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.login-box {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-box h1 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.login-box .form-control {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.login-box .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+.login-box .btn-primary {
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.login-box .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+}
+
+/* ============== NAVBAR ============== */
+.navbar {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+#userDisplay {
+  color: white;
+  margin-right: 10px;
+}
+
+#roleDisplay {
+  margin-right: 10px;
+}
+
+/* ============== SIDEBAR ============== */
+.list-group {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.list-group-item {
+  border: none;
+  padding: 12px 16px;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa;
+  padding-left: 20px;
+}
+
+.list-group-item.active {
+  background-color: var(--primary-color);
+  border-left-color: var(--primary-color);
+  color: white;
+}
+
+.list-group-item i {
+  margin-right: 8px;
+  width: 20px;
+}
+
+/* ============== CARDS ============== */
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.card-header {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #e9ecef;
+  font-weight: 600;
+  padding: 15px;
+  border-radius: 12px 12px 0 0;
+}
+
+.card.bg-primary,
+.card.bg-success,
+.card.bg-danger,
+.card.bg-warning {
+  border-radius: 12px;
+  border: none;
+}
+
+.card.bg-primary .card-body,
+.card.bg-success .card-body,
+.card.bg-danger .card-body,
+.card.bg-warning .card-body {
+  padding: 20px;
+}
+
+/* ============== TABLAS ============== */
+.table {
+  margin-bottom: 0;
+}
+
+.table thead {
+  background-color: #2b2d31;
+  color: white;
+}
+
+.table-dark {
+  background-color: #343a40;
+}
+
+.table tbody tr {
+  transition: all 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #ffffff;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+  background-color: #f8f9fa;
+}
+
+/* ============== BADGES ============== */
+.badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+/* ============== BOTONES ============== */
+.btn {
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+}
+
+.btn-success {
+  background-color: var(--success-color);
+}
+
+.btn-success:hover {
+  background-color: #15692f;
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+.btn-warning {
+  background-color: var(--warning-color);
+  color: #212529;
+}
+
+.btn-warning:hover {
+  background-color: #ffbb00;
+}
+
+.btn-sm {
+  padding: 6px 10px;
+  font-size: 0.875rem;
+}
+
+/* ============== FORMULARIOS ============== */
+.form-control,
+.form-select {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+.form-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #212529;
+}
+
+textarea.form-control {
+  resize: vertical;
+}
+
+/* ============== MODALES ============== */
+.modal-content {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #e9ecef;
+  border-radius: 12px 12px 0 0;
+}
+
+.modal-title {
+  font-weight: 700;
+  color: #212529;
+}
+
+.modal-footer {
+  background-color: #f8f9fa;
+  border-top: 2px solid #e9ecef;
+  border-radius: 0 0 12px 12px;
+}
+
+/* ============== ALERTAS ============== */
+.alert {
+  border: none;
+  border-radius: 8px;
+  border-left: 4px solid;
+}
+
+.alert-info {
+  border-left-color: var(--info-color);
+  background-color: #cff4fc;
+  color: #055160;
+}
+
+.alert-success {
+  border-left-color: var(--success-color);
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+
+.alert-danger {
+  border-left-color: var(--danger-color);
+  background-color: #f8d7da;
+  color: #842029;
+}
+
+.alert-warning {
+  border-left-color: var(--warning-color);
+  background-color: #fff3cd;
+  color: #664d03;
+}
+
+/* ============== AREA DE CONTENIDO ============== */
+.view-section {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ============== UTILIDADES ============== */
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.shadow-sm {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.row > div {
+  padding-bottom: 15px;
+}
+
+/* ============== SCROLLBAR PERSONALIZADO ============== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ============== RESPONSIVE ============== */
+@media (max-width: 768px) {
+  .container-fluid {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .col-md-3,
+  .col-md-4,
+  .col-md-6,
+  .col-md-9 {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .card {
+    margin-bottom: 10px;
+  }
+
+  .table {
+    font-size: 0.875rem;
+  }
+
+  .btn-sm {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .login-box {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .table {
+    font-size: 0.75rem;
+  }
+
+  .badge {
+    font-size: 0.65rem;
+    padding: 4px 8px;
+  }
+}
+
+/* ============== ANIMACIONES ============== */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* ============== COLORES PERSONALIZADOS ============== */
+.bg-light-blue {
+  background-color: #e7f3ff;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.text-success {
+  color: var(--success-color) !important;
+}
+
+.text-danger {
+  color: var(--danger-color) !important;
+}
+
+/* ============== ESTILOS ESPECÍFICOS ====================*/
+
+/* Dashboard Cards */
+.card.bg-primary .card-body i,
+.card.bg-success .card-body i,
+.card.bg-danger .card-body i,
+.card.bg-warning .card-body i {
+  opacity: 0.8;
+}
+
+/* Producto bajo stock */
+.badge.bg-danger {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Información en tabla */
+.table td {
+  vertical-align: middle;
+}
+
+.table small {
+  display: block;
+  margin-top: 4px;
+}
+
+/* Spacing personalizado */
+.mb-4 {
+  margin-bottom: 2rem;
+}
+
+.mt-4 {
+  margin-top: 2rem;
+}
+
+/* Efectos hover en filas de tabla */
+.table.table-hover tbody tr:hover {
+  background-color: #e7f3ff;
+  cursor: pointer;
+}
+
+/* Grid de categorías */
+#categoriasGrid .card {
+  height: 100%;
+}
+
+#categoriasGrid .card:hover {
+  border-color: var(--primary-color);
+}
+
+/* Contenedor de movimientos */
+#ultimosMovimientos,
+#movimientosRecientes,
+#bajoStockList {
+  word-break: break-word;
+}
+
+#ultimosMovimientos .mb-2,
+#movimientosRecientes .mb-3,
+#bajoStockList .alert {
+  transition: all 0.2s ease;
+}
+
+/* Estados de productos */
+.badge.bg-success {
+  background-color: #198754 !important;
+}
+
+.badge.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+/* Tabla de historial */
+#historialTable tbody tr {
+  border-bottom: 1px solid #e9ecef;
+}
+
+/* Estilos para reportes */
+#productosMasMovidos table,
+#resumenCategorias table {
+  margin-bottom: 0;
+}
+
+/* Sticky header en nav */
+.navbar.sticky-top {
+  z-index: 1030;
+}
